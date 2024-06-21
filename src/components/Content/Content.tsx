@@ -1,7 +1,7 @@
 import './Content.css'
 import ProductImage from '../../assets/product.jpg'
 import ProductImage2 from '../../assets/product2.jpg'
-import ProductImage3 from '../../assets/product3.jpg'
+import ProductImage3 from '../../assets/product3.png'
 import GoogleImage from '../../assets/google.png'
 import { useEffect } from 'react';
 
