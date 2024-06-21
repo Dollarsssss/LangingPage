@@ -1,14 +1,14 @@
 :root{
     --white:#f6f9fc;
     --mainColor:#31B7E9;
+    --colorHover:#189ed0;
     --navHeight:75px;
 }
 
 nav {
+    
+    .container {
 
-    .nav-container {
-        max-width: 1300px;
-        margin: 0 auto;
         height: var(--navHeight);
         display: flex;
         justify-content: space-between;
@@ -109,6 +109,7 @@ nav {
                 border-radius: 50px;
                 background-color: var(--mainColor);
                 color:var(--white);
+                cursor: pointer;
 
                 & .phone {
                     font-size: 20px;
@@ -118,6 +119,10 @@ nav {
                 & h4 {
                     font-size: 14px;
                 }
+            }
+
+            & .nav-menu-btn:hover {
+                background-color: var(--colorHover);
             }
         }
     }
