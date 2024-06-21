@@ -16,7 +16,7 @@ function Nav() {
 
     return (
         <nav>
-            <div className='nav-container'>
+            <div className='container'>
                 <div className='nav-logo'>
                     <span>JoJo</span>
                     <span>Studio</span>
