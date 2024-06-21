@@ -11,6 +11,7 @@ function Nav() {
     const handleToggleChange = () => {
         setIsChecked(!isChecked);
         document.body.style.backgroundColor = isChecked ? '#fff' : '#191c20';
+        document.body.style.color = isChecked ? '#191c20' : '#fff';
         
     };
 
