@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import { ReactNode, useState } from 'react'
 import './ServiceCard.css'
 import { FaArrowRight } from 'react-icons/fa6'
 
 interface ServiceCardProps {
-  title: string;
-  subtitle: string;
+  title: ReactNode; //props ที่รับเข้ามาจะเป็นอะไรก็ได้
+  subtitle: ReactNode;
 }
 
 function ServiceCard({title,subtitle}: ServiceCardProps) {
+
   
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
