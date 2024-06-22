@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import './Nav.css'
+import '../Content2/CardCollection.css'
+import '../Content2/ServiceCard/ServiceCard.css'
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { IoMoonOutline } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";
@@ -13,9 +15,17 @@ function Nav() {
         setIsChecked(!isChecked);
         document.body.style.backgroundColor = isChecked ? '#f6f9fc' : '#191c20';
         document.body.style.color = isChecked ? '#191c20' : '#f6f9fc';
-        let nav = document.getElementById("nav")
+        let nav = document.getElementById("nav")//if อีกรูปแบบนึง
         nav && (nav.style.backgroundColor = isChecked ? '#f6f9fc' : '#191c20'); //if อีกรูปแบบนึง
-        
+        let cardCollectionBG = document.getElementsByClassName("cardCollection");
+        cardCollectionBG &&  Array.from(cardCollectionBG).forEach((card: Element) => {
+            (card as HTMLElement).style.backgroundColor = isChecked ? '#f6f9fc' : '#121519';
+        });  // วนลูปผ่านการ์ดแต่ละใบและเปลี่ยนสีพื้นหลัง ที่ต้องวนลูปเพราะไอ getElementsByClassName คืนค่าเป็น collection ไม่เหมือน getbyid ที่คืนค่า DOM เดี่ยวๆ
+
+        let cardItem = document.getElementsByClassName("item");
+        cardItem &&  Array.from(cardItem).forEach((card: Element) => {
+            (card as HTMLElement).style.backgroundColor = isChecked ? '#f6f9fc' : '#191c20';
+        })
     };
 
 
