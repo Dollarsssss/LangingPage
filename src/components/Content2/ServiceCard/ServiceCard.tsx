@@ -33,7 +33,7 @@ function ServiceCard({title,subtitle}: ServiceCardProps) {
         </div>
       </div>
       <div className='card-footer' style={{ backgroundColor: isHovered ? 'var(--mainColor)' : '' }}>
-        <FaArrowRight className='arrow-right' style={{ color: isHovered ? 'var(--white)' : '' }} />
+        <FaArrowRight className='arrow-right' style={{ color: isHovered ? 'var(--coolWhite)' : '' }} />
       </div>
     </div>
   )

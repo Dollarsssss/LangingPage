@@ -13,18 +13,18 @@ function Nav() {
     
     const handleToggleChange = () => {
         setIsChecked(!isChecked);
-        document.body.style.backgroundColor = isChecked ? '#f6f9fc' : '#191c20';
-        document.body.style.color = isChecked ? '#191c20' : '#f6f9fc';
+        document.body.style.backgroundColor = isChecked ? 'var(--coolWhite)' : 'var(--dark)';
+        document.body.style.color = isChecked ? 'var(--dark)' : 'var(--coolWhite)';
         let nav = document.getElementById("nav")//if อีกรูปแบบนึง
-        nav && (nav.style.backgroundColor = isChecked ? '#f6f9fc' : '#191c20'); //if อีกรูปแบบนึง
+        nav && (nav.style.backgroundColor = isChecked ? 'var(--coolWhite)' : 'var(--dark)'); //if อีกรูปแบบนึง
         let cardCollectionBG = document.getElementsByClassName("cardCollection");
         cardCollectionBG &&  Array.from(cardCollectionBG).forEach((card: Element) => {
-            (card as HTMLElement).style.backgroundColor = isChecked ? '#f6f9fc' : '#121519';
+            (card as HTMLElement).style.backgroundColor = isChecked ? 'var(--white)' : 'var(--tooDark)';
         });  // วนลูปผ่านการ์ดแต่ละใบและเปลี่ยนสีพื้นหลัง ที่ต้องวนลูปเพราะไอ getElementsByClassName คืนค่าเป็น collection ไม่เหมือน getbyid ที่คืนค่า DOM เดี่ยวๆ
 
         let cardItem = document.getElementsByClassName("item");
         cardItem &&  Array.from(cardItem).forEach((card: Element) => {
-            (card as HTMLElement).style.backgroundColor = isChecked ? '#f6f9fc' : '#191c20';
+            (card as HTMLElement).style.backgroundColor = isChecked ? 'var(--coolWhite)' : 'var(--dark)';
         })
     };
 
@@ -56,7 +56,7 @@ function Nav() {
       
     }
     else if (isScrolled && isChecked) {
-        navbarStyle.backgroundColor = '#121519';
+        navbarStyle.backgroundColor = 'var(--tooDark)';
         navbarStyle.backdropFilter = 'blur(28px) saturate(200%)';
     }
  
@@ -71,10 +71,10 @@ function Nav() {
                     <div className='nav-menu-list'>
                         <input type="checkbox" id="darkmode-toggle" checked={isChecked} onChange={handleToggleChange} />
                         <label htmlFor="darkmode-toggle">
-                            <div style={{ color: isChecked ? 'black' : '#31B7E9' }}>
+                            <div style={{ color: isChecked ? 'black' : 'var(--mainColor)' }}>
                                 <LuSun className='sun' />
                             </div>
-                            <div style={{ color: isChecked ? '#31B7E9' : 'black' }}>
+                            <div style={{ color: isChecked ? 'var(--mainColor)' : 'black' }}>
                                 <IoMoonOutline className='moon' />
                             </div>
                         </label>

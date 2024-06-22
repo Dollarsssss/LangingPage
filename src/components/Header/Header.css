@@ -27,7 +27,7 @@ header{
                 cursor: pointer;
                 display: flex;
                 align-items: center;
-                color: var(--white);
+                color: var(--coolWhite);
                 padding: 0 25px;
                 height: 60px;
                 background-color: var(--mainColor);

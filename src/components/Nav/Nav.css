@@ -115,7 +115,7 @@ nav {
                 border: none;
                 border-radius: 50px;
                 background-color: var(--mainColor);
-                color:var(--white);
+                color:var(--coolWhite);
                 cursor: pointer;
 
                 & .phone {
