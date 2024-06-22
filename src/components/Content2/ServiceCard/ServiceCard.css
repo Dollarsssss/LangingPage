@@ -1,6 +1,6 @@
  .item {
     cursor: pointer;
-    background-color: var(--white);
+    background-color: var(--coolWhite);
     display: flex;
     flex-direction: column;
     align-items: center;

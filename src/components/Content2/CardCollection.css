@@ -1,6 +1,6 @@
 .cardCollection{
 
-    background-color: #fff;
+    background-color: var(--white);
 
     & .container {
         height: 600px;
