@@ -26,6 +26,7 @@ function Content() {
     
                 const x = (window.innerWidth - e.pageX * depth) / 100;
                 const y = (window.innerHeight - e.pageY * depth) / 100;
+                layer.style.transition = 'transform 0.1s ease-out';
                 layer.style.transform = `translate3d(${x}px, ${y}px, 0)`;
             });
         };
@@ -46,7 +47,7 @@ function Content() {
             <div className='parallax-layer-zindex-1' data-depth="2.5" id="parallaxLayerZindex-1">
                 <img src={GoogleImage} alt=''/>
             </div>
-            <div className='parallax-layer-zindex-2' data-depth="3.5" id="parallaxLayerZindex-2">
+            <div className='parallax-layer-zindex-2' data-depth="5" id="parallaxLayerZindex-2">
                 <img src={ProductImage2} alt=''/>
             </div>
             <div className='parallax-layer-zindex-3' data-depth="2" id="parallaxLayerZindex-3">
