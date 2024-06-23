@@ -1,7 +1,7 @@
 .cardPackages {
 
     & .container {
-        height: 700px;
+        height: 780px;
         display: flex;
         flex-direction: column;
         
