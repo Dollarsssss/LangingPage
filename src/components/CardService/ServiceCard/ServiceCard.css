@@ -1,6 +1,7 @@
 .serviceCard {
     
     & .item-service-card {
+        transition: background-color 0.2s ease-out;
         cursor: pointer;
         background-color: var(--coolWhite);
         display: flex;
@@ -24,7 +25,7 @@
             
             & .card-top {
                 margin-top: 20px;
-                margin-bottom: 45px;
+                margin-bottom: 15px;
             }
     
             & .card-mid {

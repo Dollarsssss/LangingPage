@@ -23,7 +23,7 @@ function PackagesCard({title, subTitle, price, description}:PackagesCard) {
             <h1>{price} ฿</h1>
           </div>
           <div className="card-footer">
-             <h4>{description}</h4>
+             <h4 className='text-small'>{description}</h4>
           </div>
         </div>
       </div>

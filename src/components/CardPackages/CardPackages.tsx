@@ -39,7 +39,7 @@ function CardPackages() {
       <div className="container">
         <div className="cardPackages-title">
           <h1>แพ็คเกจบริการทำเว็บที่เหมาะกับธุรกิจคุณ!</h1>
-          <h4>เลือกแพ็คเกจสำหรับทำเว็บไซต์  ไม่ว่าธุรกิจเล็กหรือใหญ่</h4>
+          <h4 className='text-small'>เลือกแพ็คเกจสำหรับทำเว็บไซต์  ไม่ว่าธุรกิจเล็กหรือใหญ่</h4>
         </div>
         <div className="card-collection">
           <PackagesCard title={packages[0].title} subTitle={packages[0].subtitle} price={packages[0].price} description={packages[0].description}/>
