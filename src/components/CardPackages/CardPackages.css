@@ -1,0 +1,32 @@
+.cardPackages {
+
+    & .container {
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        
+
+        & .cardPackages-title {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 40px;
+
+            & h1 {
+                font-size: 42px;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+
+            & h4 {
+                font-size: 17px;
+            }
+        }
+
+        & .card-collection{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 30px;
+        }
+    }
+}

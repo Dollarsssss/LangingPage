@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './Nav.css'
-import '../Content2/CardCollection.css'
-import '../Content2/ServiceCard/ServiceCard.css'
+import '../CardService/CardCollection.css'
+import '../CardService/ServiceCard/ServiceCard.css'
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { IoMoonOutline } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";

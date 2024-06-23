@@ -3,7 +3,8 @@ import './App.css'
 import Nav from './components/Nav/Nav'
 import Header from './components/Header/Header';
 import Content from './components/Content/Content';
-import CardCollection from './components/Content2/CardCollection';
+import CardCollection from './components/CardService/CardCollection';
+import CardPackages from './components/CardPackages/CardPackages';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     <Header/>
     <Content/>
     <CardCollection/>
+    <CardPackages/>
     </>
   )
 }
