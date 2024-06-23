@@ -84,7 +84,6 @@ function CardCollection() {
                 subtitle={services[4].subtitle}
               /></SwiperSlide></SwiperSlide>
             </Swiper>
-      
         </div>
       </div>
     </section>
