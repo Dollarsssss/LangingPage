@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './Nav.css'
 import '../CardService/CardCollection.css'
 import '../CardService/ServiceCard/ServiceCard.css'
+import '../CardPackages/PackagesCard/PackagesCard.css'
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { IoMoonOutline } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";
@@ -22,10 +23,16 @@ function Nav() {
             (card as HTMLElement).style.backgroundColor = isChecked ? 'var(--white)' : 'var(--tooDark)';
         });  // วนลูปผ่านการ์ดแต่ละใบและเปลี่ยนสีพื้นหลัง ที่ต้องวนลูปเพราะไอ getElementsByClassName คืนค่าเป็น collection ไม่เหมือน getbyid ที่คืนค่า DOM เดี่ยวๆ
 
-        let cardItem = document.getElementsByClassName("item");
-        cardItem &&  Array.from(cardItem).forEach((card: Element) => {
+        let cardServiceItem = document.getElementsByClassName("item-service-card");
+        let cardPackageItem = document.getElementsByClassName("item-package-card");
+        cardServiceItem &&  Array.from(cardServiceItem).forEach((card: Element) => {
             (card as HTMLElement).style.backgroundColor = isChecked ? 'var(--coolWhite)' : 'var(--dark)';
         })
+        cardPackageItem &&  Array.from(cardPackageItem).forEach((card: Element) => {
+            (card as HTMLElement).style.backgroundColor = isChecked ? 'var(--white)' : 'var(--tooDark)';
+            (card as HTMLElement).style.border = isChecked ? '1px solid var(--borderWhite)' : '1px solid var(--borderDark)';
+        })
+        
     };
 
 

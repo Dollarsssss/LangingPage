@@ -4,11 +4,11 @@
     max-width: 300px;
    
 
-    & .item {
+    & .item-package-card {
     
         width: 300px;
-        height: 500px;
-        border: 1px solid var(--border);
+        height: 480px;
+        border: 1px solid var(--borderWhite);
         border-radius: 30px;
         display: flex;
         flex-direction: column;
