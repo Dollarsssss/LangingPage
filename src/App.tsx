@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import Content from './components/Content/Content';
 import CardCollection from './components/CardService/CardCollection';
 import CardPackages from './components/CardPackages/CardPackages';
+import Accordion from './components/Accordion&IMG/Accordion';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
     <Content/>
     <CardCollection/>
     <CardPackages/>
+    <Accordion/>
     </>
   )
 }

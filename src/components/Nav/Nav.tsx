@@ -3,6 +3,7 @@ import './Nav.css'
 import '../CardService/CardCollection.css'
 import '../CardService/ServiceCard/ServiceCard.css'
 import '../CardPackages/PackagesCard/PackagesCard.css'
+import '../CardPackages/CardPackages.css'
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { IoMoonOutline } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";
@@ -25,6 +26,7 @@ function Nav() {
 
         let cardServiceItem = document.getElementsByClassName("item-service-card");
         let cardPackageItem = document.getElementsByClassName("item-package-card");
+
         cardServiceItem &&  Array.from(cardServiceItem).forEach((card: Element) => {
             (card as HTMLElement).style.backgroundColor = isChecked ? 'var(--coolWhite)' : 'var(--dark)';
         })
@@ -32,7 +34,11 @@ function Nav() {
             (card as HTMLElement).style.backgroundColor = isChecked ? 'var(--white)' : 'var(--tooDark)';
             (card as HTMLElement).style.border = isChecked ? '1px solid var(--borderWhite)' : '1px solid var(--borderDark)';
         })
-        
+
+        let textSmall = document.getElementsByClassName("text-small");
+         textSmall &&  Array.from(textSmall).forEach((text: Element) => {
+            (text as HTMLElement).style.color = isChecked ? 'var(--textColor2)' : 'var(--textSmall)';
+        })
     };
 
 

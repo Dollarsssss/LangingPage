@@ -3,11 +3,12 @@ import './ServiceCard.css'
 import { FaArrowRight } from 'react-icons/fa6'
 
 interface ServiceCardProps {
+  logo:ReactNode
   title: ReactNode; //props ที่รับเข้ามาจะเป็นอะไรก็ได้
   subtitle: ReactNode;
 }
 
-function ServiceCard({ title, subtitle }: ServiceCardProps) {
+function ServiceCard({ logo ,title, subtitle }: ServiceCardProps) {
 
 
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -25,7 +26,7 @@ function ServiceCard({ title, subtitle }: ServiceCardProps) {
       <div className="item-service-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <div className='item-wrapper'>
           <div className='card-top'>
-            Your logo
+            {logo}
           </div>
           <div className='card-mid'>
             <h3>{title}</h3>

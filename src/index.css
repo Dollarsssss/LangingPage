@@ -12,6 +12,8 @@
   --textColor2:#576071;
   --borderWhite:#e3e9ef;
   --borderDark:#313337;
+
+  --textSmall:rgba(255, 255, 255, 0.7);
   }
   
   * {
