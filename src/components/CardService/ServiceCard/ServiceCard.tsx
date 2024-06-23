@@ -22,7 +22,7 @@ function ServiceCard({ title, subtitle }: ServiceCardProps) {
 
   return (
     <section className='serviceCard'>
-      <div className="item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <div className="item-service-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <div className='item-wrapper'>
           <div className='card-top'>
             Your logo

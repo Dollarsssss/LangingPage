@@ -12,7 +12,7 @@ function PackagesCard({title, subTitle, price, description}:PackagesCard) {
 
   return (
     <div className='packagesCard'>
-      <div className="item">
+      <div className="item-package-card">
         <div className="item-wrapper">
           <div className="card-top">
             <h1>{title}</h1>

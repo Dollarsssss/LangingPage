@@ -1,6 +1,6 @@
 .serviceCard {
     
-    & .item {
+    & .item-service-card {
         cursor: pointer;
         background-color: var(--coolWhite);
         display: flex;
