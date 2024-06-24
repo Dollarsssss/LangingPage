@@ -16,20 +16,20 @@
         };
         
         let buttonAccordion = document.getElementById(`accordion${id}`);
-        buttonAccordion && (buttonAccordion.style.color= isOpen ? 'var(--mainColor)' : 'var(--textColor2)');
+        buttonAccordion && (buttonAccordion.style.color= isOpen ? 'var(--mainColor)' : 'var(--textColor3)');
         
     
         return (
             <section className='accordion'>
                 <div className="accordion-item">
                     <h3 className='accordion-header'>
-                        <button id={`accordion${id}`} className="accordion-btn" onClick={toggleAccordion}>
+                        <button id={`accordion${id}`} className={`accordion-btn ${isOpen ? 'open' : ''}`}  onClick={toggleAccordion}  aria-expanded={isOpen}>
                             <h1>{title}</h1>
                         </button>
                     </h3>
                     <div className={`accordion-wrapper ${isOpen ? 'open':''}`}>
                         <div className="accordion-body">
-                           {content}
+                           <h4>{content}</h4>
                         </div>
                     </div>
                 </div>
