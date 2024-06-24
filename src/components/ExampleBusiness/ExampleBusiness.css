@@ -41,9 +41,31 @@
             }
 
             & .binded-content {
-                border: 1px solid red;
                 width: 50%;
                 height: 500px;
+
+              & .binded-wrapper {
+                position: relative;
+                width: 100%;
+                height: 100%;
+
+                & .binded-img {
+                    border-radius: 31px;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: opacity .35s ease-in-out, visibility .35s ease-in-out;
+                }
+                & .binded-img.open{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    visibility: visible;
+                    opacity: 1;
+                }
+              }
             }
         }
     }

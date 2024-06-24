@@ -15,15 +15,12 @@
             onToggle(id);
         };
         
-        let buttonAccordion = document.getElementById(`accordion${id}`);
-        buttonAccordion && (buttonAccordion.style.color= isOpen ? 'var(--mainColor)' : 'var(--textColor3)');
-        
     
         return (
             <section className='accordion'>
                 <div className="accordion-item">
                     <h3 className='accordion-header'>
-                        <button id={`accordion${id}`} className={`accordion-btn ${isOpen ? 'open' : ''}`}  onClick={toggleAccordion}  aria-expanded={isOpen}>
+                        <button id={`accordion${id}`} style={{ color: isOpen ? 'var(--mainColor)' : 'var(--textColor3)' }} className={`accordion-btn ${isOpen ? 'open' : ''}`}  onClick={toggleAccordion}  aria-expanded={isOpen}>
                             <h1>{title}</h1>
                         </button>
                     </h3>
