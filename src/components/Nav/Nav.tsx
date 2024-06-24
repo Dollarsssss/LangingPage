@@ -15,10 +15,13 @@ function Nav() {
     
     const handleToggleChange = () => {
         setIsChecked(!isChecked);
+
         document.body.style.backgroundColor = isChecked ? 'var(--coolWhite)' : 'var(--dark)';
         document.body.style.color = isChecked ? 'var(--dark)' : 'var(--coolWhite)';
+
         let nav = document.getElementById("nav")//if อีกรูปแบบนึง
         nav && (nav.style.backgroundColor = isChecked ? 'var(--coolWhite)' : 'var(--dark)'); //if อีกรูปแบบนึง
+        
         let cardCollectionBG = document.getElementsByClassName("cardCollection");
         cardCollectionBG &&  Array.from(cardCollectionBG).forEach((card: Element) => {
             (card as HTMLElement).style.backgroundColor = isChecked ? 'var(--white)' : 'var(--tooDark)';

@@ -42,9 +42,9 @@ function CardPackages() {
           <h4 className='text-small'>เลือกแพ็คเกจสำหรับทำเว็บไซต์  ไม่ว่าธุรกิจเล็กหรือใหญ่</h4>
         </div>
         <div className="card-collection">
-          <PackagesCard title={packages[0].title} subTitle={packages[0].subtitle} price={packages[0].price} description={packages[0].description}/>
-          <PackagesCard title={packages[1].title} subTitle={packages[1].subtitle} price={packages[1].price} description={packages[1].description}/>
-          <PackagesCard title={packages[2].title} subTitle={packages[2].subtitle} price={packages[2].price} description={packages[2].description}/>
+           {packages.map((item,index)=>
+            <PackagesCard key={index} title={item.title} subTitle={item.subtitle} price={item.price} description={item.description} />
+          )}
         </div>
       </div>
     </section>
