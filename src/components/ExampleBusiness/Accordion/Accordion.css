@@ -19,6 +19,7 @@
                 text-align: start;
                 display: flex;
                 align-items: center;
+               
                 color: var(--textColor3);
 
                 & h1 {
@@ -34,22 +35,22 @@
                 width: 15px;
                 height: 15px;
                 background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='var%28--ar-gray-800%29'%3e%3cpath d='M.5 6.3c.6-.6 1.6-.6 2.3 0l9.3 9.3 9.3-9.3c.6-.6 1.6-.6 2.3 0 .6.6.6 1.6 0 2.3L13.3 18.8c-.6.6-1.6.6-2.3 0L.8 8.5c-.9-.8-.9-1.6-.3-2.2z'/%3e%3c/svg%3e");
+                transition: transform 0.3s ease; 
+             
             }
-            & .accordion-btn::after {
-                position: absolute;
-                right: 0px;
-                content: "";
-                width: 15px;
-                height: 15px;
-                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='var%28--ar-gray-800%29'%3e%3cpath d='M.5 6.3c.6-.6 1.6-.6 2.3 0l9.3 9.3 9.3-9.3c.6-.6 1.6-.6 2.3 0 .6.6.6 1.6 0 2.3L13.3 18.8c-.6.6-1.6.6-2.3 0L.8 8.5c-.9-.8-.9-1.6-.3-2.2z'/%3e%3c/svg%3e");
+
+            & .accordion-btn.open::after {
+                transition: rotage 0.3s ease-in-out;
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23448c74'%3e%3cpath d='M.5 6.3c.6-.6 1.6-.6 2.3 0l9.3 9.3 9.3-9.3c.6-.6 1.6-.6 2.3 0 .6.6.6 1.6 0 2.3L13.3 18.8c-.6.6-1.6.6-2.3 0L.8 8.5c-.9-.8-.9-1.6-.3-2.2z'/%3e%3c/svg%3e");
+                transform: rotate(-180deg); /* ปรับหมุนภาพตามที่ต้องการ */
+                transition: transform 0.3s ease; 
             }
         }
 
         & .accordion-wrapper {
-
             overflow: hidden;
-            transition: max-height 0.3s ease-in-out;
-            max-height: 0;
+            height: 0;
+            transition: height 0.35s ease;
         
 
             & .accordion-body {
@@ -57,11 +58,15 @@
                 padding-bottom: 20px;
                 color: var(--textColor2);
 
+                & h4 {
+                    font-size: 16.5px;
+                }
             }
         }
 
         .accordion-wrapper.open  {
-            max-height: 200px; /* ตั้งค่าความสูงของเนื้อหาที่แสดงเมื่อเปิด */
+            height: 100px;
+            transition: height 0.35s ease;
         }
 
        
