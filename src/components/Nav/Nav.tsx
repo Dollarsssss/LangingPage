@@ -14,56 +14,18 @@ function Nav() {
 
     const [theme, setTheme] = useState('light');
 
+    const [isChecked, setIsChecked] = useState<boolean>(false);
+    const [isScrolled, setIsScrolled] = useState<boolean>(false);
+
     const toggleTheme = () => {
       const newTheme = theme === 'light' ? 'dark' : 'light';
       setTheme(newTheme);
+      setIsChecked(!isChecked)
     };
   
     useEffect(() => {
       document.documentElement.setAttribute('data-bs-theme', theme);
     }, [theme]);
-
-    const [isChecked, setIsChecked] = useState<boolean>(false);
-    const [isScrolled, setIsScrolled] = useState<boolean>(false);
-    
-    const handleToggleChange = () => {
-        setIsChecked(!isChecked);
-
-        let body = document.body.style.backgroundColor = isChecked ? 'var(--coolWhite)' : 'var(--dark)';
-        document.body.style.color = isChecked ? 'var(--dark)' : 'var(--coolWhite)';
-
-        let nav = document.getElementById("nav")//if อีกรูปแบบนึง
-        nav && (nav.style.backgroundColor = isChecked ? 'var(--coolWhite)' : 'var(--dark)'); //if อีกรูปแบบนึง
-        
-        let cardCollectionBG = document.getElementsByClassName("cardCollection");
-        cardCollectionBG &&  Array.from(cardCollectionBG).forEach((card: Element) => {
-            (card as HTMLElement).style.backgroundColor = isChecked ? 'var(--white)' : 'var(--tooDark)';
-        });  // วนลูปผ่านการ์ดแต่ละใบและเปลี่ยนสีพื้นหลัง ที่ต้องวนลูปเพราะไอ getElementsByClassName คืนค่าเป็น collection ไม่เหมือน getbyid ที่คืนค่า DOM เดี่ยวๆ
-
-        let cardServiceItem = document.getElementsByClassName("item-service-card");
-        let cardPackageItem = document.getElementsByClassName("item-package-card");
-
-        cardServiceItem &&  Array.from(cardServiceItem).forEach((card: Element) => {
-            (card as HTMLElement).style.backgroundColor = isChecked ? 'var(--coolWhite)' : 'var(--dark)';
-        })
-        cardPackageItem &&  Array.from(cardPackageItem).forEach((card: Element) => {
-            (card as HTMLElement).style.backgroundColor = isChecked ? 'var(--white)' : 'var(--tooDark)';
-            (card as HTMLElement).style.border = isChecked ? '1px solid var(--borderWhite)' : '1px solid var(--borderDark)';
-        })
-
-        let textSmall = document.getElementsByClassName("text-small");
-         textSmall &&  Array.from(textSmall).forEach((text: Element) => {
-            (text as HTMLElement).style.color = isChecked ? 'var(--textColor2)' : 'var(--textSmall)';
-        })
-
-        let example = document.getElementsByClassName("example")
-        example &&  Array.from(example).forEach((example: Element) => {
-            (example as HTMLElement).style.backgroundColor = isChecked ? 'var(--white)' : 'var(--tooDark)';
-        })
-
-
-            
-    };
 
 
     useEffect(() => {
@@ -86,16 +48,16 @@ function Nav() {
         transition: 'background-color 0.1s ease',
     }
 
-    if (isScrolled && !isChecked) {
+    if (isScrolled) {
 
         navbarStyle.backgroundColor = 'rgba(246, 249, 252, 0.8)';
         navbarStyle.backdropFilter = 'blur(28px) saturate(200%)';
       
     }
-    else if (isScrolled && isChecked) {
-        navbarStyle.backgroundColor = 'var(--tooDark)';
-        navbarStyle.backdropFilter = 'blur(28px) saturate(200%)';
-    }
+    // else if (isScrolled && isChecked) {
+    //     navbarStyle.backgroundColor = 'var(--tooDark)';
+    //     navbarStyle.backdropFilter = 'blur(28px) saturate(200%)';
+    // }
  
     return (
         <nav id="nav" style={navbarStyle}>
@@ -106,7 +68,7 @@ function Nav() {
                 </div>
                 <div className='nav-menu'>
                     <div className='nav-menu-list'>
-                        <input type="checkbox" id="darkmode-toggle" checked={isChecked} onChange={handleToggleChange} />
+                        <input type="checkbox" id="darkmode-toggle" checked={isChecked} onChange={toggleTheme} />
                         <label htmlFor="darkmode-toggle">
                             <div style={{ color: isChecked ? 'black' : 'var(--mainColor)' }}>
                                 <LuSun className='sun' />
@@ -127,3 +89,42 @@ function Nav() {
 }
 
 export default Nav
+
+   // const handleToggleChange = () => {
+    //     setIsChecked(!isChecked);
+
+    //     let body = document.body.style.backgroundColor = isChecked ? 'var(--coolWhite)' : 'var(--dark)';
+    //     document.body.style.color = isChecked ? 'var(--dark)' : 'var(--coolWhite)';
+
+    //     let nav = document.getElementById("nav")//if อีกรูปแบบนึง
+    //     nav && (nav.style.backgroundColor = isChecked ? 'var(--coolWhite)' : 'var(--dark)'); //if อีกรูปแบบนึง
+        
+    //     let cardCollectionBG = document.getElementsByClassName("cardCollection");
+    //     cardCollectionBG &&  Array.from(cardCollectionBG).forEach((card: Element) => {
+    //         (card as HTMLElement).style.backgroundColor = isChecked ? 'var(--white)' : 'var(--tooDark)';
+    //     });  // วนลูปผ่านการ์ดแต่ละใบและเปลี่ยนสีพื้นหลัง ที่ต้องวนลูปเพราะไอ getElementsByClassName คืนค่าเป็น collection ไม่เหมือน getbyid ที่คืนค่า DOM เดี่ยวๆ
+
+    //     let cardServiceItem = document.getElementsByClassName("item-service-card");
+    //     let cardPackageItem = document.getElementsByClassName("item-package-card");
+
+    //     cardServiceItem &&  Array.from(cardServiceItem).forEach((card: Element) => {
+    //         (card as HTMLElement).style.backgroundColor = isChecked ? 'var(--coolWhite)' : 'var(--dark)';
+    //     })
+    //     cardPackageItem &&  Array.from(cardPackageItem).forEach((card: Element) => {
+    //         (card as HTMLElement).style.backgroundColor = isChecked ? 'var(--white)' : 'var(--tooDark)';
+    //         (card as HTMLElement).style.border = isChecked ? '1px solid var(--borderWhite)' : '1px solid var(--borderDark)';
+    //     })
+
+    //     let textSmall = document.getElementsByClassName("text-small");
+    //      textSmall &&  Array.from(textSmall).forEach((text: Element) => {
+    //         (text as HTMLElement).style.color = isChecked ? 'var(--textColor2)' : 'var(--textSmall)';
+    //     })
+
+    //     let example = document.getElementsByClassName("example")
+    //     example &&  Array.from(example).forEach((example: Element) => {
+    //         (example as HTMLElement).style.backgroundColor = isChecked ? 'var(--white)' : 'var(--tooDark)';
+    //     })
+
+
+            
+    // };
