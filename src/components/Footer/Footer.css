@@ -84,7 +84,7 @@ footer {
         
                             & li {
                                 font-weight: 300;
-                                margin-bottom: 6px;
+                                margin-bottom: 8px;
                                 font-size: 17px;
                                 color: var(--textColor2);
                                 list-style: none;
