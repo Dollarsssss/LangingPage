@@ -1,14 +1,27 @@
 import { useEffect, useState } from 'react';
-import './Nav.css'
-import '../CardService/CardCollection.css'
-import '../CardService/ServiceCard/ServiceCard.css'
-import '../CardPackages/PackagesCard/PackagesCard.css'
-import '../CardPackages/CardPackages.css'
+import './Nav.css';
+import '../CardService/CardCollection.css';
+import '../CardService/ServiceCard/ServiceCard.css';
+import '../CardPackages/PackagesCard/PackagesCard.css';
+import '../CardPackages/CardPackages.css';
+import '../ExampleBusiness/ExampleBusiness.css';
+import '../ExampleBusiness/Accordion/Accordion.css';
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { IoMoonOutline } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";
 
 function Nav() {
+
+    const [theme, setTheme] = useState('light');
+
+    const toggleTheme = () => {
+      const newTheme = theme === 'light' ? 'dark' : 'light';
+      setTheme(newTheme);
+    };
+  
+    useEffect(() => {
+      document.documentElement.setAttribute('data-bs-theme', theme);
+    }, [theme]);
 
     const [isChecked, setIsChecked] = useState<boolean>(false);
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -16,7 +29,7 @@ function Nav() {
     const handleToggleChange = () => {
         setIsChecked(!isChecked);
 
-        document.body.style.backgroundColor = isChecked ? 'var(--coolWhite)' : 'var(--dark)';
+        let body = document.body.style.backgroundColor = isChecked ? 'var(--coolWhite)' : 'var(--dark)';
         document.body.style.color = isChecked ? 'var(--dark)' : 'var(--coolWhite)';
 
         let nav = document.getElementById("nav")//if อีกรูปแบบนึง
@@ -42,6 +55,14 @@ function Nav() {
          textSmall &&  Array.from(textSmall).forEach((text: Element) => {
             (text as HTMLElement).style.color = isChecked ? 'var(--textColor2)' : 'var(--textSmall)';
         })
+
+        let example = document.getElementsByClassName("example")
+        example &&  Array.from(example).forEach((example: Element) => {
+            (example as HTMLElement).style.backgroundColor = isChecked ? 'var(--white)' : 'var(--tooDark)';
+        })
+
+
+            
     };
 
 
