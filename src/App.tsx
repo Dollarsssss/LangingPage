@@ -8,6 +8,7 @@ import CardCollection from "./components/CardService/CardCollection";
 import CardPackages from "./components/CardPackages/CardPackages";
 import ExampleBusiness from "./components/ExampleBusiness/ExampleBusiness";
 import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 import { createContext } from "react";
 
@@ -42,6 +43,7 @@ function App() {
       <CardPackages />
       <ExampleBusiness />
       <Contact/>
+      <Footer/>
     </DataContext.Provider>
   );
 }
