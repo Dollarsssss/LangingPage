@@ -1,28 +1,27 @@
 .contact-card-item {
-    border-radius: 30px;
-    padding: 35px;
-    width: 320px;   
-    height: 280px;
-    background-color: var(--white);
+  border-radius: 30px;
+  padding: 35px;
+  width: 320px;
+  height: 270px;
+  background-color: var(--white);
 
-    & .logo {
-        margin-bottom: 10px;
-       & .text-main {
-        color: #1638d8;;
-       }
-
-       & .text-primary {
-        color: var(--mainColor);
-       }
+  & .logo {
+    margin-bottom: 10px;
+    & .text-main {
+      color: #1638d8;
     }
 
-    & .title {
-        margin-bottom: 15px;
+    & .text-primary {
+      color: var(--mainColor);
     }
+  }
 
-    & .subtitle {
-        color: var(--textColor2);
-        font-weight: 300;
-    }
+  & .title {
+    margin-bottom: 15px;
+  }
+
+  & .subtitle {
+    color: var(--textColor2);
+    font-weight: 300;
+  }
 }
-

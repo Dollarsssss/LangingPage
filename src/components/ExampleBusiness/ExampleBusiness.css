@@ -1,5 +1,7 @@
 .example {
+    
     background-color: var(--white);
+
    & .container {
         height: 800px;
         overflow: hidden;
