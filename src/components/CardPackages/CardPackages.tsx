@@ -1,39 +1,12 @@
 import './CardPackages.css'
 import PackagesCard from './PackagesCard/PackagesCard'
+import { useContext } from 'react'
+import { DataContext } from '../../App'
 
 function CardPackages() {
 
-  const packages = [
-    {
-      title: <>Corporate</>,
-      subtitle: <>เว็บไซต์สำหรับองค์กร</>,
-      price:<>68,000</>,
-      description:<>รับทำเว็บไซต์ขนาดกลาง <br />
-      ไปจนถึงขนาดใหญ่<br />
-      ระบบจัดการหลังบ้านที่สะดวกและ<br />
-      จัดการได้ง่าย<br />
-      พร้อมบริการเสริมการตลาด<br />
-      ออนไลน์</>
-    },
-    {
-      title: <>E-Commerce</>,
-      subtitle: <>เว็บไซต์ร้านค้า ขายของออนไลน์</>,
-      price:<>88,000</>,
-      description:<>รับทำเว็บไซต์ร้านค้าออนไลน์เปิด <br />
-      ขายและรับเงินได้ตลอดเวลา <br />
-      รองรับทั้งร้านขนาดเล็กและ<br />
-      ขนาดใหญ่</>
-    },
-    {
-      title: <>Custom</>,
-      subtitle: <>เว็บไซต์เฉพาะตามธุรกิจ</>,
-      price:<>188,000</>,
-      description:<>รับทำเว็บไซต์ที่ออกแบบโดยเฉพาะ <br />
-      แบรนด์ หรือธุรกิจคุณเพื่อให้เหมาะ <br />
-      กับกลุ่มเป้าหมาย และโจทย์ทาง<br />
-      ธุรกิจ</>
-    },
-  ];
+  const {packages} = useContext(DataContext)
+
   return (
     <section className='cardPackages'>
       <div className="container">

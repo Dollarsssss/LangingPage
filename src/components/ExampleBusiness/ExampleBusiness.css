@@ -1,12 +1,13 @@
 .example {
-
+    background-color: var(--white);
    & .container {
-        height: 700px;
+        height: 800px;
+        overflow: hidden;
 
         & .example-title {
             text-align: center;
-            margin-top: 50px;
-            margin-bottom: 40px;
+            margin-top: 70px;
+            margin-bottom: 50px;
 
             & h1 {
                 font-size: 42px;
@@ -16,6 +17,7 @@
 
             & h4 {
                 font-size: 17px;
+                font-weight: 500;
             }
         }
 

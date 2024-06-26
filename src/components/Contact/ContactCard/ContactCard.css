@@ -1,0 +1,28 @@
+.contact-card-item {
+    border-radius: 30px;
+    padding: 35px;
+    width: 320px;
+    height: 280px;
+    background-color: var(--white);
+
+    & .logo {
+        margin-bottom: 10px;
+       & .text-main {
+        color: #1638d8;;
+       }
+
+       & .text-primary {
+        color: var(--mainColor);
+       }
+    }
+
+    & .title {
+        margin-bottom: 15px;
+    }
+
+    & .subtitle {
+        color: var(--textColor2);
+        font-weight: 300;
+    }
+}
+

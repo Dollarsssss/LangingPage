@@ -20,7 +20,7 @@ function PackagesCard({title, subTitle, price, description}:PackagesCard) {
           </div>
           <div className="card-mid">
             <h4>ราคาเริ่มต้น</h4>
-            <h1>{price} ฿</h1>
+            <h1>{price}฿</h1>
           </div>
           <div className="card-footer">
              <h4 className='text-small'>{description}</h4>
