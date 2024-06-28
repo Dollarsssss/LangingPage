@@ -1,17 +1,19 @@
 .serviceCard {
+  
 
   & .item-service-card {
     
     transition: background-color 0.2s ease-out;
     cursor: pointer;
-    background-color: var(--coolWhite);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
+    border-radius: 40px;
     width: 306px;
-    height: 400px;
+    height: 410px;
+    text-decoration-line: none;
+    background-color: var(--coolWhite);
 
     & .item-wrapper {
       width: 260px;
@@ -20,9 +22,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: center;
-      text-decoration-line: none;
-      color: var(--tooDark);
+      text-align: center; 
+      margin-bottom: 5px;
 
       & .card-top {
         margin-top: 20px;
@@ -30,13 +31,16 @@
       }
 
       & .card-mid {
+     
         & h3 {
+          color: var(--tooDark);
           font-size: 20px;
         }
 
         & h4 {
+          font-weight: 400;
           font-size: 17px;
-          color: var(--textColor);
+          color: var(--textColor2);
         }
       }
     }
@@ -50,7 +54,7 @@
       justify-content: center;
       align-items: center;
       transition: background-color 0.2s ease-in;
-
+      margin-bottom: 15px;
       & .arrow-right {
         font-size: 15px;
         color: var(--mainColor);

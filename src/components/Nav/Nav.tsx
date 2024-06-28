@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import './Nav.css';
 import '../CardService/CardCollection.css';
 import '../CardService/ServiceCard/ServiceCard.css';
@@ -11,30 +11,31 @@ import { IoMoonOutline } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";
 
 function Nav() {
-
-    const [theme, setTheme] = useState('light');
-
+ 
     const [isChecked, setIsChecked] = useState<boolean>(false);
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
+    
+    const setDarkTheme = () =>{
+        document.querySelector("html")?.setAttribute("data-theme", "dark")
+    }
+    const setLightTheme = () =>{
+        document.querySelector("html")?.setAttribute("data-theme", "light")
+    }
 
-    const toggleTheme = () => {
-      const newTheme = theme === 'light' ? 'dark' : 'light';
-      setTheme(newTheme);
-      setIsChecked(!isChecked)
+    const toggleTheme = (event: ChangeEvent<HTMLInputElement>) => {
+        event.target.checked ? setDarkTheme() : setLightTheme();
+        setIsChecked(!isChecked)
+        console.log(isChecked);
     };
-  
-    useEffect(() => {
-      document.documentElement.setAttribute('data-bs-theme', theme);
-    }, [theme]);
-
-
+    
     useEffect(() => {
         const handleScroll = () => {
             const scrollTop = window.scrollY;
-            if (scrollTop > 0) {
+            if (scrollTop > 1) {
                 setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
+                
+            } else if (scrollTop <= 0) {    
+                setIsScrolled(false)
             }
         };
 
@@ -48,16 +49,16 @@ function Nav() {
         transition: 'background-color 0.1s ease',
     }
 
-    if (isScrolled) {
-
-        navbarStyle.backgroundColor = 'rgba(246, 249, 252, 0.8)';
-        navbarStyle.backdropFilter = 'blur(28px) saturate(200%)';
-      
+    if (isScrolled && !isChecked) {
+        navbarStyle.backgroundColor = 'rgba(255, 255, 255, 0.75)';
+        navbarStyle.backdropFilter = 'blur(30px) saturate(200%)';
     }
-    // else if (isScrolled && isChecked) {
-    //     navbarStyle.backgroundColor = 'var(--tooDark)';
-    //     navbarStyle.backdropFilter = 'blur(28px) saturate(200%)';
-    // }
+
+    else if (isScrolled && isChecked) {
+        navbarStyle.backgroundColor = 'var(--tooDark)';
+        navbarStyle.backdropFilter = 'blur(30px) saturate(200%)';
+    }
+ 
  
     return (
         <nav id="nav" style={navbarStyle}>

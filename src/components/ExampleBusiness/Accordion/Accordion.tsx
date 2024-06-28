@@ -1,6 +1,6 @@
-    import { ReactNode, useEffect, useState } from 'react'
-    import './Accordion.css'
-import { FaS } from 'react-icons/fa6'
+import { ReactNode } from 'react'
+import './Accordion.css'
+
 
     interface AccordionProp {
         id:number
@@ -26,7 +26,7 @@ import { FaS } from 'react-icons/fa6'
                     </h3>
                     <div className={`accordion-wrapper ${isOpen ? 'open':''}`}>
                         <div className="accordion-body">
-                           <h4 className='text-small'>{content}</h4>
+                           <h4>{content}</h4>
                         </div>
                     </div>
                 </div>
