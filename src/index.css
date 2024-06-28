@@ -28,6 +28,10 @@
     margin: 0 auto;
   }
 
+  html{
+    scroll-behavior: smooth;
+  }
+
   body{
 
     font-family: "Kanit", sans-serif;
