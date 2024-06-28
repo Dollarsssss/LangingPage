@@ -7,7 +7,7 @@ function Contact() {
 
     const {contacts} = useContext(DataContext)
   return (
-    <section className="contact">
+    <section id="Contact" className="contact">
       <div className="container">
         <div className="contact-text">
           <div className="contact-text-wrapper">

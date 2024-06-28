@@ -24,7 +24,7 @@ function ServiceCard({ logo ,title, subtitle }: ServiceCardProps) {
   return (
     <section className='serviceCard'>
       <div className="item-service-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        <div className='item-wrapper'>
+        <a href="#Contact" className='item-wrapper'>
           <div className='card-top'>
             {logo}
           </div>
@@ -33,10 +33,10 @@ function ServiceCard({ logo ,title, subtitle }: ServiceCardProps) {
             <br />
             <h4>{subtitle}</h4>
           </div>
-        </div>
-        <div className='card-footer' style={{ backgroundColor: isHovered ? 'var(--mainColor)' : '' }}>
+        </a>
+        <a href="#Contact" className='card-footer' style={{ backgroundColor: isHovered ? 'var(--mainColor)' : '' }}>
           <FaArrowRight className='arrow-right' style={{ color: isHovered ? 'var(--coolWhite)' : '' }} />
-        </div>
+        </a>
       </div>
     </section>
   )
