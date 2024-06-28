@@ -17,6 +17,7 @@
   --textSmall:rgba(255, 255, 255, 0.7);
   }
   
+ 
   * {
     margin: 0;
     padding: 0;
@@ -29,7 +30,9 @@
   }
 
   html{
+
     scroll-behavior: smooth;
+
   }
 
   body{
@@ -37,8 +40,8 @@
     font-family: "Kanit", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background-color: var(--coolWhite);
-    padding-top: 80px;
+    /* background-color: var(--coolWhite); */
+
 
   }  
   button{
@@ -50,4 +53,138 @@
     font-weight: 300;
     font-style: normal;
    
+  }
+  
+   /*light theme*/
+  [data-theme="light"]{
+    background-color: var(--coolWhite);
+    color: black;
+  }
+
+  [data-theme="light"] .cardCollection{
+    background-color: var(--white);
+    color: black;
+  }
+
+  [data-theme="light"] .example{
+    background-color: var(--white);
+    color: black;
+  }
+
+
+
+ /*dark theme*/
+  [data-theme="dark"]{
+    background-color: var(--dark);
+    color: white;
+  }
+
+  [data-theme="dark"] .cardCollection{
+    background-color: var(--tooDark);
+    color: white;
+
+      & .serviceCard .item-service-card {
+        background-color: var(--dark);
+        color: var(--white);
+
+        & .card-mid h3 {
+          color: var(--white);
+        }
+
+        & .card-mid h4 {
+          color: var(--textSmall)
+        }
+      }
+  }
+  
+  [data-theme="dark"] .cardPackages {
+    
+    & .cardPackages-title h4 {
+      color: var(--textSmall)
+    }
+
+    & .packagesCard .item-package-card {
+      background-color: var(--tooDark);
+      border: 1px solid var(--borderDark);
+
+      & .card-footer h4 {
+        color: var(--textSmall)
+      }
+    }
+}
+ 
+
+  [data-theme="dark"] .example{
+    background-color: var(--tooDark);
+    color: white;
+
+      & .example-title h4{
+
+        color: var(--textSmall)
+        
+      }
+
+      & .accordion .accordion-btn {
+        color: var(--white);
+      }
+
+      & .accordion .accordion-btn::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='rgba%28255, 255, 255, 0.9%29'%3e%3cpath d='M.5 6.3c.6-.6 1.6-.6 2.3 0l9.3 9.3 9.3-9.3c.6-.6 1.6-.6 2.3 0 .6.6.6 1.6 0 2.3L13.3 18.8c-.6.6-1.6.6-2.3 0L.8 8.5c-.9-.8-.9-1.6-.3-2.2z'/%3e%3c/svg%3e");
+      }
+      & .accordion .accordion-body {
+
+        color: var(--textSmall)
+        
+      }
+  }
+
+  [data-theme="dark"] .contact  {
+
+      & .contact-text-wrapper {
+
+        & strong {
+          color: var(--textSmall) !important;
+        }
+        & p {
+          color: var(--textSmall) !important;
+        }
+      }
+
+      & .contact-card-item  {
+        background-color: var(--tooDark);
+
+        & .subtitle {
+          color: var(--textSmall);
+        }
+      }
+     
+  }
+
+  [data-theme="dark"] footer {
+
+    & .title {
+
+      & span:nth-of-type(2){
+        color: var(--textSmall) !important;
+      }
+
+    }
+  
+    & p {
+      color: var(--textSmall) !important;
+    }
+    & strong {
+      color: var(--textSmall) !important;
+    }
+
+    & .text-item ul li {
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+    
+    & .icon {
+      background-color: var(--dark) !important;
+      i {
+        color: var(--white) !important;
+      }
+    }
   }

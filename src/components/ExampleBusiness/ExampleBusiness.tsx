@@ -28,7 +28,7 @@ function ExampleBusiness() {
       <div className="container">
         <div className="example-title">
           <h1>ตัวอย่างเว็บไซต์ตามประเภทธุรกิจ</h1>
-          <h4 className='text-small' >ลูกค้าส่วนหนึ่งจากตามแต่ละประเภทธุรกิจที่ไว้ใจให้เราได้ดูแล</h4>
+          <h4>ลูกค้าส่วนหนึ่งจากตามแต่ละประเภทธุรกิจที่ไว้ใจให้เราได้ดูแล</h4>
         </div>
         <div className='example-content'>
           <div className="accordion-content">

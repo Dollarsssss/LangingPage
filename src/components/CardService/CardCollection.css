@@ -1,7 +1,5 @@
 .cardCollection{
 
-    background-color: var(--white);
-
     & .container {
         height: 650px;
 

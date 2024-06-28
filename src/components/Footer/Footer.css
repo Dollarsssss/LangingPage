@@ -1,6 +1,5 @@
 footer {
-
-  background-color: var(--coolWhite);
+    
   padding: 0 50px;
   height: 600px;
 
@@ -74,6 +73,7 @@ footer {
                     justify-content: space-between;
 
                     & .text-item {
+                        
 
                         & h6 {
                             font-size: 18px;
@@ -83,6 +83,7 @@ footer {
                         & ul {
         
                             & li {
+                               
                                 font-weight: 300;
                                 margin-bottom: 8px;
                                 font-size: 17px;
