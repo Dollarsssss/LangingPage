@@ -4,7 +4,7 @@ import { FaArrowRight } from 'react-icons/fa6'
 
 interface ServiceCardProps {
   logo:ReactNode
-  title: ReactNode; //props ที่รับเข้ามาจะเป็นอะไรก็ได้
+  title: ReactNode; 
   subtitle: ReactNode;
 }
 
@@ -21,9 +21,14 @@ function ServiceCard({ logo ,title, subtitle }: ServiceCardProps) {
     setIsHovered(false);
   }
 
+  const scrollToContact = () => {
+    const contactElement = document.getElementById('Contact');
+    contactElement && contactElement.scrollIntoView();
+  };
+
   return (
     <section className='serviceCard'>
-      <a href="#Contact" className="item-service-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <a className="item-service-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={scrollToContact}>
         <div className='item-wrapper'>
           <div className='card-top'>
             {logo}
@@ -34,9 +39,9 @@ function ServiceCard({ logo ,title, subtitle }: ServiceCardProps) {
             <h4>{subtitle}</h4>
           </div>
         </div>
-        <a href="#Contact" className='card-footer' style={{ backgroundColor: isHovered ? 'var(--mainColor)' : '' }}>
+        <div className='card-footer' style={{ backgroundColor: isHovered ? 'var(--mainColor)' : '' }}>
           <FaArrowRight className='arrow-right' style={{ color: isHovered ? 'var(--coolWhite)' : '' }} />
-        </a>
+        </div>
       </a>
     </section>
   )
