@@ -30,9 +30,8 @@
   }
 
   html{
-
     scroll-behavior: smooth;
-
+ 
   }
 
   body{
@@ -205,3 +204,8 @@
       }
     }
   }
+
+  /*Scolling*/
+  /* ::-webkit-scrollbar{
+      width: 20px;
+  } */

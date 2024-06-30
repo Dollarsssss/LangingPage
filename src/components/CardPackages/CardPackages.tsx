@@ -8,7 +8,7 @@ function CardPackages() {
   const {packages} = useContext(DataContext)
 
   return (
-    <section className='cardPackages'>
+    <section id="CardPackages" className='cardPackages'>
       <div className="container">
         <div className="cardPackages-title">
           <h1>แพ็คเกจบริการทำเว็บที่เหมาะกับธุรกิจคุณ!</h1>
