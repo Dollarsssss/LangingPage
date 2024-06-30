@@ -25,7 +25,6 @@ function Nav() {
     const toggleTheme = (event: ChangeEvent<HTMLInputElement>) => {
         event.target.checked ? setDarkTheme() : setLightTheme();
         setIsChecked(!isChecked)
-        console.log(isChecked);
     };
     
     useEffect(() => {
